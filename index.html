@@ -1,28 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fundamentals of Computing</title>
-    <link rel="stylesheet" href="style.css">
+<style>
+  body {
+    background-color: PowderBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  img {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .button-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+</style>
 </head>
 <body>
 
-    <div class="navbar">
-        <div>
-            <a href="index.html">Home</a>
-            <a href="project.html">Projects</a>
-            <a href="concepts.html">Concepts</a>
-            <a href="database.html">Database</a>
-            <a href="documentation.html">Documents</a>
-            <a href="about_me.html">About Me</a>
-        </div>
-    </div>
+<h2>Districts of Belize</h2>
 
-    <h1>Fundamentals of Computing</h1>
-    <img src="f.o.c.jpg" alt="Fundamentals of computing" style="width:400px;height:200px;">
+<img id="myImage" src="Blank_map_of_Belize.jpg" alt="Belize Map">
 
-    <div class="section">
-        <p>This course is an introduction to the fundamentals of Computer Science that will provide students with a foundation for future courses in Computer Science. The course is a broad survey of the discipline through topics that allow students to understand the capabilities of computer systems in terms of: the computer architecture; operating systems and computer networks; software and software development; data organization and visualization; and the potential of computing machines.</p>
-    </div>
+<p id="districtName">Belize District</p>
+
+<div class="button-row">
+  <button onclick="showDistrict(1)">Belize</button>
+  <button onclick="showDistrict(2)">Corozal District</button>
+  <button onclick="showDistrict(3)">Orange Walk District</button>
+  <button onclick="showDistrict(4)">Belize District</button>
+  <button onclick="showDistrict(5)">Cayo District</button>
+  <button onclick="showDistrict(6)">Stann Creek District</button>
+  <button onclick="showDistrict(7)">Toledo District</button>
+</div>
+
+<script>
+function showDistrict(num) {
+  const img = document.getElementById("myImage");
+  const name = document.getElementById("districtName");
+
+  if (num === 1) {
+    img.src = "Blank_map_of_Belize.jpg";
+    name.textContent = "Country of Belize";
+  } else if (num === 2) {
+    img.src = "Corozal_in_Belize.jpg";
+    name.textContent = "Corozal District";
+  } else if (num === 3) {
+    img.src = "Orange_Walk_in_Belize.jpg";
+    name.textContent = "Orange Walk District";
+  } else if (num === 4) {
+    img.src = "Belize_in_Belize.jpg";
+    name.textContent = "Belize District";
+  } else if (num === 5) {
+    img.src = "cayo-belize-map.jpg";
+    name.textContent = "Cayo District";
+  } else if (num === 6) {
+    img.src = "Stann_Creek_in_Belize.jpg";
+    name.textContent = "Stann Creek District";
+  } else if (num === 7) {
+    img.src = "Toledo_in_Belize.jpg";
+    name.textContent = "Toledo District";
+  }
+}
+</script>
 
 </body>
 </html>
